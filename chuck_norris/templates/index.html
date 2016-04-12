@@ -1,0 +1,12 @@
+<form class="form" action="{{ details }}" method="post">{% csrf_token %}
+	{{ form.non_field_errors }}
+	<div class="input-group">
+	    <label for="{{ form.first_name.id_for_label }}">Voornaam</label>
+	    {{ form.first_name }}
+	</div>
+		<div class="input-group">
+	    <label for="{{ form.last_name.id_for_label }}">Achternaam</label>
+	    {{ form.last_name}}
+	</div>
+		  <input class="btn btn-primary" type="submit" value="Submit" />
+	</form>
