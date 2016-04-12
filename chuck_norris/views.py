@@ -40,7 +40,7 @@ def index(request):
 
     return render(request, 'index.html', {'form': form})
 
-def detail(request):
+def detail(request, first_name,last_name):
     if request.method == 'POST':
         form = JokeForm(request.POST)
         firstname = request.POST.get('first_name', '')
